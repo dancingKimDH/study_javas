@@ -1,4 +1,4 @@
-public class setandgetvariable {
+public class Setandgetvariable {
     public static void main(String[] args) {
         int twohundred = 200;
         int thirty = 30;
@@ -38,7 +38,7 @@ public class setandgetvariable {
         System.out.println (B);
         System.out.println (C);
         System.out.println (D);
-        
+
         //return 0;
     }
 
