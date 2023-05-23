@@ -1,5 +1,3 @@
-import javax.swing.Spring;
-
 public class quest {
     public static void main(String[] args) {
 
@@ -12,7 +10,7 @@ public class quest {
 
         System.out.println(N3);
         System.out.println(N1);
-
+//return 0;
     }
 
 }
