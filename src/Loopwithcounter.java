@@ -9,6 +9,6 @@ public class Loopwithcounter {
             C = C + 1;
             B = B + 1;
         }
-
+        // return 0;
     }
 }
