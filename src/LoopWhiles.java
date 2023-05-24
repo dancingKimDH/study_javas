@@ -10,9 +10,9 @@ public class LoopWhiles {
         int second = 10;
         while (first < second) {
             System.out.println(first);
-
+            first = first + 2;
+            
         }
-        System.out.println();
-
+        System.out.println();  
     }
 }
