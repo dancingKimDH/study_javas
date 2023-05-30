@@ -19,7 +19,7 @@ public class MethodSwitches {
               } 
         } catch (Exception e) {}
         return str;
-    }
+    } //function은 되도록 한번만! 매번 println을 쓰면 X
     public static void main(String[] args) {
         try {
         int day = 4;
