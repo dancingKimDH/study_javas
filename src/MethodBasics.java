@@ -9,6 +9,11 @@ public class MethodBasics {
         return result;
     }
 
+    public int A(int y) {
+        int finalresult = y + 1;
+        return finalresult;
+    }
+
     public static void main(String[] args) {
         try {
             int y = 0;
@@ -18,7 +23,8 @@ public class MethodBasics {
             // 인스턴스화 시킨 후 결과 값을 환산하도록 함
             // y = x + 1; // 변수에 + 1
 
-            y = methodbasics.F(y);
+            MethodBasics finalresults = new MethodBasics();
+            y = finalresults.A(y);
             System.out.println(y);
 
         } catch (Exception e) {
