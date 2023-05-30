@@ -10,5 +10,5 @@ public class plusTwoVar {
         System.out.println(A + B);
 
         // return 0;
-    }
-}
+    } 
+} 
