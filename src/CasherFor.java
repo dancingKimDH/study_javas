@@ -17,9 +17,7 @@ public class CasherFor {
                 else if(shopping[first] == 0) {
                     System.out.println("0원인 상품입니다. 계산을 종료합니다.");
                     break;
-
                 } 
-                
 
             }
             int sum = 0;

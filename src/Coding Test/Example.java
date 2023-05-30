@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.Scanner;
 public class Example {
     public static void main(String[] args) {
@@ -5,11 +6,11 @@ public class Example {
         
         String sentence = myObj.nextLine();
         String [] list = sentence.split(" ");
-        long sum = 0;
+        BigInteger sum = BigInteger.ZERO;
         for (int i = 0; i < list.length; i = i + 1) {
             try {
-            long number = Integer.parseInt(list[i]);
-            sum = sum + number;
+            BigInteger number = new BigInteger(list[i]);
+            sum = sum.add(number);
 
         } catch (NumberFormatException e) {}}
 
