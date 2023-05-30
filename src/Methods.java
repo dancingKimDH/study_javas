@@ -22,7 +22,8 @@ public class Methods {
         // {
         // //body
         // }
-    Methods methods = new Methods();
+    try {
+        Methods methods = new Methods(); // 인스턴스화. methods는 인스턴스
     int a = 2;
     int b = 1;
     a = methods.add(a,b);
@@ -43,8 +44,8 @@ public class Methods {
     a = methods.add(a,b);
     a = methods.minus(a,b);
     System.out.println(a);
-
+} catch (Exception e) {}
     
-    }
+    } 
 
 }
