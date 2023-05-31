@@ -26,10 +26,11 @@ public class PollsWhile {
                 System.out.println("처음으로 돌아갑니다. 다시 입력해 주세요.");
                 continue;
             }   break;
-
+            
 
         } 
     } catch (Exception e) {} finally {}
+    
     // return 0;
 }
 

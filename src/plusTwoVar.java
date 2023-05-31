@@ -8,7 +8,7 @@ public class plusTwoVar {
         A = myObj.nextInt();
         B = myObj.nextInt();
         System.out.println(A + B);
-
+        myObj.close();
         // return 0;
     } 
 } 

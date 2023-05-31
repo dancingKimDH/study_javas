@@ -26,6 +26,7 @@ public class MethodSwitches {
         String str = "";
         MethodSwitches methodswitches = new MethodSwitches();
         String returnResult = methodswitches.today(day);
+        
         // return 0;
         System.out.println(returnResult);
     } catch (Exception e) {}

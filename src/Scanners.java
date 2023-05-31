@@ -11,7 +11,8 @@ public class Scanners {
         first = myObj.nextInt();
         second = myObj.nextInt();
         System.out.println(first + ", " + second);
+        myObj.close();
         // return 0;
-
+        
     } 
 } 
