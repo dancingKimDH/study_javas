@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class MethodWhile {
     public String gettime(int time) {
         String str = "";
@@ -16,7 +17,8 @@ public class MethodWhile {
         return str;
     }
     public static void main(String[] args) {
-        int time = 15;
+        Scanner myObj = new Scanner(System.in);
+        int time = myObj.nextInt();
         MethodWhile gettime = new MethodWhile();
         String result = gettime.gettime(time);
         System.out.println(result);
