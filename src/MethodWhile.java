@@ -28,8 +28,14 @@ public class MethodWhile {
     public static void main(String[] args) {
         Scanner myObj = new Scanner(System.in);
         int time = myObj.nextInt();
+        try {
         MethodWhile gettime = new MethodWhile();
         String result = gettime.gettime(time);
         System.out.println(result);
+        } catch (Exception e) {}
+     finally {
+        myObj.close();
     }
+}
+
 }
