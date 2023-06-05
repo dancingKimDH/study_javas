@@ -29,16 +29,19 @@ public class Example3 {
         int finalm = 0;
         int D = 0;
         if (resultm >= 60) {
-            finalm = resultm % 60;
             D = resultm / 60;
             resulth = resulth + D;
-        } else if (resulth >= 24) {
+            finalm = resultm - D * 60;
+        } else {
+            finalm = resultm;
+        } 
+
+        if (resulth >= 24) {
             finalh = resulth - 24;
-            
         } else {
             finalh = resulth;
-            finalm = resultm;
         }
+        
         System.out.println();
         System.out.println(finalh + " " + finalm);
     } catch (Exception e) {}
