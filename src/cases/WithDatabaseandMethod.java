@@ -3,10 +3,9 @@ package cases;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
-
-public class WithDatabase {
-    public static void main(String[] args) {
+public class WithDatabaseandMethod {
+        
+    public ArrayList createlist() {
         try {
             ArrayList<HashMap> Patientlist = new ArrayList<HashMap>();
             HashMap<String, String> Patient = new HashMap<String, String>();
@@ -57,11 +56,10 @@ public class WithDatabase {
                         patient.get("Height, Weight") + "\n" +
                         patient.get("Blood Pressure, Blood Sugar Level"));
 
-                ;
-            }
+
+            }  return Patientlist;
 
         } catch (Exception e) {
             // TODO: handle exception
-        }
+        } }
     }
-}
