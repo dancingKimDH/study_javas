@@ -6,7 +6,7 @@ public class PollsWhile {
         Scanner myObj = new Scanner(System.in);
         String answer = "";
 
-
+        
         System.out.println("선택에 따라 안내글을 보여드립니다. \n ----- 작동 key -----");
         System.out.println("(P)oll: 설문 시작  \n(S)tatistic: 설문 통계 \n(E)xit: 종료)");
 

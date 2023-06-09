@@ -5,7 +5,7 @@ public class CasherFor {
             Scanner myObj = new Scanner(System.in);
             int [] shopping = new int[5]; //Array에 5개 공간 만들기
             System.out.println("장바구니엔 5가지만 넣을 수 있으며, 100원 초과는 0원 처리됩니다.\n가격을 입력해 주세요.");
-            
+            myObj.close();
             for(int first = 0; first < shopping.length; first = first + 1) {
                 shopping[first] = myObj.nextInt();
 
