@@ -1,6 +1,10 @@
 import java.util.HashMap;
 import java.util.Scanner;
+
+import commons.Commons;
+
 import java.sql.*;
+
 
 public class CarsWithDB {
     public static void main(String[] args) {
@@ -54,13 +58,48 @@ public class CarsWithDB {
                         }
                         number = number + 1;
 
-                    }
+                    } System.out.println();
+
                     //차량 번호 입력
                     System.out.print("= 차 이름 명단: ");
                     String CarNumber = scanner.nextLine();
                     System.out.println("차명 PK" + carNumberMap.get(CarNumber));
                     
-
+                    System.out.println("- 선택 가능 옵션들");
+                    query = "SELECT OPTION_INFOR_ID, OPTION_NAME\n" + //
+                            "FROM option_infors;";
+                    resultSet = statement.executeQuery(query);
+                    number = 1;
+                    HashMap<String, String> carOptionInfor = new HashMap<>();
+                    while(resultSet.next()){
+                        System.out.print(number + ", " + 
+                        resultSet.getString("OPTION_NAME") + ", ");
+                        carOptionInfor.put(String.valueOf(number), resultSet.getString("OPTION_INFOR_ID"));
+                        number = number + 1;
+                    } 
+                    System.out.println();
+                    System.out.print("추가 옵션 선택: ");
+                    String optionNumber = scanner.nextLine();
+                    System.out.println(carNumberMap.get(CarNumber) + ", " + carOptionInfor.get(optionNumber));
+                    String carPk = carNumberMap.get(CarNumber);
+                    String optionPk = carOptionInfor.get(optionNumber);
+                    
+                    // delete option
+                    query = "DELETE FROM `OPTIONS`\n" + //
+                            "WHERE CAR_INFOR_ID = '" + carPk + "'\n" + //
+                            "AND OPTION_INFOR_ID = '"+ optionPk +"'";
+                    int count = statement.executeUpdate(query);
+                    
+                    // insert option
+                    Commons commons = new Commons();
+                    String optionId = commons.generateUUID();
+                    query = "INSERT INTO `OPTIONS`\n" + //
+                            "(OPTION_ID, CAR_INFOR_ID, OPTION_INFOR_ID)\n" + //
+                            "value\n" + //
+                            "('"+optionId+"', '"+carPk+"', '"+optionPk+"');";
+                    count = statement.executeUpdate(query);
+                    System.out.println();
+                    
                 } else if (workKey.equals("S")) {
                     System.out.println("- 통계 시작 -");
                     query = "SELECT T_FAC.COMPANY, T_CAR_INFOR.CAR_NAME, COUNT(*) AS CNT\n" + //
