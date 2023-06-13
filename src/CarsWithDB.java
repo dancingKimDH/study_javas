@@ -1,11 +1,7 @@
 import java.util.HashMap;
 import java.util.Scanner;
-
 import commons.Commons;
-
 import java.sql.*;
-
-
 public class CarsWithDB {
     public static void main(String[] args) {
         try {
