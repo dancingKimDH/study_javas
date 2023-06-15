@@ -1,9 +1,8 @@
-package cases;
 import java.util.Scanner;
 import java.util.HashMap;
 import java.sql.*;
 
-public class survey {
+public class SurveyApp {
     public static void main(String[] args) {
 
         try {
