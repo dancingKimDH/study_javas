@@ -12,12 +12,20 @@ public class SurveyApp {
             Connection connection = DriverManager.getConnection(url, user, password);
             System.out.println("DB연결 성공\n");
 
+            // 통계
+            System.out.println("--- 통계 ---");
+            // 총 설명자: 3명
             Statement statement = connection.createStatement();
-            String query = "SELECT * FROM db_cars.factorys";
-            ResultSet resultSet = statement.executeQuery(query);
+            String queryA = "SELECT COUNT(T_STAT.RESPONDENTS_ID) AS CNT\n" + //
+                    "FROM\n" + //
+                    "(SELECT RESPONDENTS_ID, COUNT(*) AS CNT\n" + //
+                    "FROM statistics\n" + //
+                    "GROUP BY RESPONDENTS_ID\n" + //
+                    ") AS T_STAT";
+            ResultSet resultSet = statement.executeQuery(queryA);
             while (resultSet.next()) {
-                resultSet.getString("COMPANY_ID");
-                resultSet.getString("COMPANY");
+                System.out.println( "총 설명자: " +
+                resultSet.getString("CNT"));
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -25,3 +33,4 @@ public class SurveyApp {
         }
     }
 }
+
