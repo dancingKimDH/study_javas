@@ -10,30 +10,18 @@ public class SurveyApp {
             String password = "!yojulab*";
             Connection connection = DriverManager.getConnection(url, user, password);
             System.out.println("DB연결 성공\n");
-            
-            //- query Edit
+
+            // - query Edit
+            // 블럭 밖에서 사용되는 변수 중 안에서 사용될 변수가 있나? Parameter / Data Type
+            // 블럭 안에서 산출되는 return 중 밖에서 사용될 변수가 무엇인가? Return 
             Statement statement = connection.createStatement();
-      
-            // 통계 - 총 설문자 표시       
-            Statistics statistics = new Statistics();
+            // 통계 - 총 설문자 표시: statistics.java Method
+            Statistics statistics = new Statistics(); 
             statistics.getRespondents(statement);
 
-            // -- 총 설문자 : 3명
-            String queryB = "SELECT COUNT(*) CNT\n" + //
-                    "FROM (\n" + //
-                    "SELECT RESPONDENTS_ID, COUNT(*) CNT\n" + //
-                    "FROM statistics\n" + //
-                    "GROUP BY RESPONDENTS_ID\n" + //
-                    ") AS T_STATIC\n";
-            ResultSet resultSet = statement.executeQuery(queryB);
-            while (resultSet.next()) {
-                System.out.println( "총 설명자: " +
-                resultSet.getString("CNT"));
-            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
        
         }
     }
 }
-
