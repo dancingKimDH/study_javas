@@ -10,7 +10,7 @@ public class SurveyApp {
             Connection connection = DriverManager.getConnection(url, user, password);
             System.out.println("DB연결 성공\n");
             Statement statement = connection.createStatement();
-            
+
             // -- 설문자 가능 명단(가입)
             // 1. 홍길동, 2. 장길산,
             System.out.println("--- 설문자 가능 명단 ---");
@@ -33,8 +33,23 @@ public class SurveyApp {
             queryB = "SELECT *\n" + //
                     "FROM questions;";
             resultSet = statement.executeQuery(queryB);
+
+            Statement statement_second = connection.createStatement();
             while (resultSet.next()) {
                 System.out.println(resultSet.getString("QUESTIONS"));
+                queryB = "SELECT T_CHO.CHOICE_ID, T_CHO.CHOICE\n" + //
+                        "FROM question_choice AS T_QUES\n" + //
+                        "INNER JOIN choice AS T_CHO\n" + //
+                        "ON T_QUES.CHOICE_ID = T_CHO.CHOICE_ID\n" + //
+                        "AND QUESTIONS_ID = 'Q1';";
+                ResultSet resultSet_second = statement_second.executeQuery(queryB);
+                int number_second = 1;
+                while (resultSet_second.next()) {
+                    System.out.print(number_second + ". " + 
+                    resultSet_second.getString("CHOICE") + ", ");
+                    number_second = number_second + 1;
+                    
+                } System.out.println();
             }
             System.out.println();
 
