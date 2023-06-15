@@ -13,7 +13,6 @@ public class SurveyApp {
             Statement statement = connection.createStatement();
             System.out.println("--- 통계 ---");
 
-            
             // -- 총 설문자 : 3명
             String queryB = "SELECT COUNT(*) CNT\n" + //
                     "FROM (\n" + //
