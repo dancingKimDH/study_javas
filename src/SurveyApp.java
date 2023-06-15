@@ -1,5 +1,7 @@
 import java.sql.*;
 
+import surveys.Statistics;
+
 public class SurveyApp {
     public static void main(String[] args) {
         try {
@@ -11,24 +13,14 @@ public class SurveyApp {
             
             //- query Edit
             Statement statement = connection.createStatement();
-            System.out.println("--- 통계 ---");
+      
+            // 통계 - 총 설문자 표시       
+            Statistics statistics = new Statistics();
+            statistics.getRespondents(statement);
 
-            
-            // -- 총 설문자 : 3명
-            String queryB = "SELECT COUNT(*) CNT\n" + //
-                    "FROM (\n" + //
-                    "SELECT RESPONDENTS_ID, COUNT(*) CNT\n" + //
-                    "FROM statistics\n" + //
-                    "GROUP BY RESPONDENTS_ID\n" + //
-                    ") AS T_STATIC\n";
-            ResultSet resultSet = statement.executeQuery(queryB);
-            while (resultSet.next()) {
-                System.out.println( "총 설명자: " +
-                resultSet.getString("CNT"));
-            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            // TODO: handle exception
+       
         }
     }
 }
