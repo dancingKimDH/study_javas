@@ -1,7 +1,6 @@
 package surveys;
 
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Statistics {
     public int getRespondents(Statement statement) {
@@ -17,8 +16,8 @@ public class Statistics {
                     ") AS T_STATIC\n";
             ResultSet resultSet = statement.executeQuery(queryB);
             while (resultSet.next()) {
-                System.out.println( "총 설명자: " +
-                resultSet.getString("CNT"));
+                System.out.println("총 설명자: " +
+                        resultSet.getString("CNT"));
             }
        } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -26,7 +25,5 @@ public class Statistics {
        
        
         return 0;
-
     }
-    
 }
