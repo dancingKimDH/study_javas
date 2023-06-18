@@ -38,7 +38,7 @@ public class SurveysApp {
             HashMap<String, String> respondentsInfo = new HashMap<>();
             while (resultSet.next()) {
                 System.out.print(number + "." +
-                        resultSet.getString("respondents") + ",");
+                resultSet.getString("respondents") + ",");
                 respondentsInfo.put(String.valueOf(number), resultSet.getString("RESPONDENTS_ID"));
                 number = number + 1;
             }
