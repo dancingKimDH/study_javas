@@ -117,6 +117,7 @@ public class CarsWithDB {
                 }
             }
             System.out.println("--- 작업 종료 ---");
+            
 
         } catch (Exception e) {
             // TODO: handle exception
