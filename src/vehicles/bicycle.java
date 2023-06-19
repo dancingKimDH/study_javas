@@ -9,7 +9,7 @@ public class bicycle {
 
     //constructor
     public bicycle() {
-
+        System.out.println("Bicycle - param empty");
     }
 
     // parameter만 존재하는 constructor
