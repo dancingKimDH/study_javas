@@ -1,6 +1,6 @@
-import inheritances.ObjectInheritances;
-import vehicles.MountainBike;
-import vehicles.bicycle;
+// import inheritances.ObjectInheritances;
+// import vehicles.MountainBike;
+// import vehicles.bicycle;
 import vehicles.RoadCycle;
 
 public class Inheritances {

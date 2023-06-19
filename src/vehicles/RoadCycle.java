@@ -9,8 +9,6 @@ public class RoadCycle extends bicycle {
         this.Name = name;
         this.price = price;
         this.color = color;
-        
-    
     }
 
     public String toString() {
