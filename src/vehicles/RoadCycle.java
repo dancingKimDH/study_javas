@@ -1,25 +1,21 @@
 package vehicles;
 
-import java.util.HashMap;
-
-public class RoadCycle extends Bicycle {
-    int seatHight;
-
-    public RoadCycle(){
+public class RoadCycle extends bicycle {
+    String Name = "";
+    public RoadCycle() {
 
     }
-     public RoadCycle(int price, String color, int seatHight){
-         this.seatHight = seatHight;
-         super.price = price;
-         super.color = color;
-    }
-    
-     public String toString(){
-          String str = "price :" + super.price + ", color :" + super.color
-          +", seatHight" + this.seatHight;
-          return str;
+    public RoadCycle(int price, String color, String name) {
+        this.Name = name;
+        this.price = price;
+        this.color = color;
         
-       }
-}
-
     
+    }
+
+    public String toString() {
+        String str = "name: " + this.Name + ", price: " + this.price + ", color: " + this.color;
+        return str;
+    }
+    
+}

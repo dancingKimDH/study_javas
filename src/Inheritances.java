@@ -1,6 +1,8 @@
 import inheritances.ObjectInheritances;
 import vehicles.MountainBike;
 import vehicles.bicycle;
+import vehicles.RoadCycle;
+
 public class Inheritances {
     public static void main(String[] args) {
         try {
@@ -15,7 +17,10 @@ public class Inheritances {
             // MountainBike mountainBike = new MountainBike();
             
             //super.
-            MountainBike mountainBike = new MountainBike(6200, "yellow", 20);
+            // MountainBike mountainBike = new MountainBike(6200, "yellow", 20);
+            
+            RoadCycle roadcycle = new RoadCycle(200000, "Blue", "Super-Fast Bike");
+            System.out.println(roadcycle.toString());
 
             System.out.println();
 
