@@ -2,7 +2,9 @@
 // import vehicles.MountainBike;
 // import vehicles.bicycle;
 // import vehicles.RoadCycle;
+import vehicles.Bike;
 import vehicles.Car;
+import vehicles.Vehicle;
 
 
 public class Inheritances {
@@ -29,8 +31,8 @@ public class Inheritances {
             Car car = new Car();
             car.speedUp(1);
             car.speedDown(2);
-            System.out.println();
 
+            Vehicle bike = new Bike();
             System.out.println();
 
         } catch (Exception e) {
