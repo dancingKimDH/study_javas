@@ -2,8 +2,11 @@
 // import vehicles.MountainBike;
 // import vehicles.bicycle;
 // import vehicles.RoadCycle;
-import vehicles.Car;
 
+import java.util.HashMap;
+import vehicles.Car;
+import vehicles.Vehicle;
+import vehicles.Bike;
 
 public class Inheritances {
     public static void main(String[] args) {
@@ -31,7 +34,10 @@ public class Inheritances {
             car.speedDown(2);
             System.out.println();
 
+            Vehicle bike = new Bike();
             System.out.println();
+
+            HashMap<String, String> hashMap = new HashMap<>();
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
