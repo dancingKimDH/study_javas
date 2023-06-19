@@ -3,13 +3,10 @@ package surveys;
 import java.sql.*;
 
 public class Statistics {
-    // public int ? (statement)
-    // return
-    // return value는 0 or NULL
-
     public int getRespondents(Statement statement) {
-        try {
-            System.out.println("--- 통계 ---");
+       try {
+        System.out.println("--- 통계 ---");
+ 
             // -- 총 설문자 : 3명
             String queryB = "SELECT COUNT(*) CNT\n" + //
                     "FROM (\n" + //
@@ -22,9 +19,11 @@ public class Statistics {
                 System.out.println("총 설명자: " +
                         resultSet.getString("CNT"));
             }
-        } catch (Exception e) {
+       } catch (Exception e) {
             System.out.println(e.getMessage());
-        }
+       }
+       
+       
         return 0;
     }
 }
