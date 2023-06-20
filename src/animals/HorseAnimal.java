@@ -1,9 +1,9 @@
 package animals;
 
 public class HorseAnimal implements InterfaceAnimal {
-    int legs = 0;
+    int legs = 4;
     int arms = 0;
-    String speech = "";
+    String speech = "No";
     int speed = 0;
     int increment = 12;
     
@@ -25,11 +25,7 @@ public class HorseAnimal implements InterfaceAnimal {
         return this.speech;
     }
 
-    public String toString() {
-        String str = "legs: " + this.legs + ", arms: " + this.arms + ", speech: " + this.speech;
-        return str;
 
-    }
 
     @Override
     public int speedUp(int speed) {

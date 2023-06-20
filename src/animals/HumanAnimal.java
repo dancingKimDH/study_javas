@@ -1,11 +1,11 @@
 package animals;
 
 public class HumanAnimal implements InterfaceAnimal {
-    int legs = 0;
-    int arms = 0;
+    int legs = 2;
+    int arms = 2;
     int speed = 0;
     int increment = 3;
-    String speech = "";
+    String speech = "Yes";
 
     @Override
     public int setLegs(int legs) {
@@ -23,12 +23,6 @@ public class HumanAnimal implements InterfaceAnimal {
     public String setEnableSpeech(String speech) {
         this.speech = speech;
         return this.speech;
-    }
-
-    public String toString() {
-        String str = "legs: " + this.legs + ", arms: " + this.arms + ", speech: " + this.speech;
-        return str;
-
     }
 
     @Override
