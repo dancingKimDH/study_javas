@@ -25,8 +25,6 @@ public class HorseAnimal implements InterfaceAnimal {
         return this.speech;
     }
 
-
-
     @Override
     public int speedUp(int speed) {
         this.speed = this.speed + increment;
