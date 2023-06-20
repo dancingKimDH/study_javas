@@ -2,11 +2,19 @@
 // import vehicles.MountainBike;
 // import vehicles.bicycle;
 // import vehicles.RoadCycle;
+<<<<<<< HEAD
 import vehicles.Bike;
 import vehicles.Car;
 import vehicles.Vehicle;
+=======
+>>>>>>> 06be43e74c4b83ba9960f9931659a4144ddf721b
 
+// import java.util.HashMap;
+// import vehicles.Car;
+// import vehicles.Vehicle;
+// import vehicles.Bike;
 
+import vehicles.Scooter;
 public class Inheritances {
     public static void main(String[] args) {
         try {
@@ -28,12 +36,27 @@ public class Inheritances {
             // System.out.println(roadcycle.toString());
 
             // 구현 호출
+<<<<<<< HEAD
             Car car = new Car();
             car.speedUp(1);
             car.speedDown(2);
 
             Vehicle bike = new Bike();
             System.out.println();
+=======
+            // Car car = new Car();
+            // car.speedUp(1);
+            // car.speedDown(2);
+            // System.out.println();
+
+            // Vehicle bike = new Bike();
+            // System.out.println();
+
+            // Abstract 추상화 확인
+            Scooter scooter = new Scooter();
+            System.out.println();
+
+>>>>>>> 06be43e74c4b83ba9960f9931659a4144ddf721b
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
